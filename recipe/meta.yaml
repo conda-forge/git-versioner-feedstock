@@ -1,6 +1,6 @@
 {% set name = "git-versioner" %}
 {% set name_url = "git_versioner" %}
-{% set version = "4.1" %}
+{% set version = "4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/py3/{{ name[0] }}/{{ name }}/{{ name_url }}-{{ version }}-py3-none-any.whl
-  sha256: b3493abb515fe2fb4a5dab9d81b0dc145476eb1fef422a701ba79ef7364248d9
+  sha256: 6bfeba6fd2afe7c33a10b0db9028bd6a9bd4cc13cbfa9e81ed6851f98ec38808
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://gitlab.com/alelec/__version__
-  summary: 'Manage current / next version for project'
+  summary: Manage current / next version for project
   description: |
     git-versioner manages the version number for the project based on git tags.
     The goal of this packages versioning scheme is to avoid ever needing to
