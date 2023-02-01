@@ -24,6 +24,10 @@ requirements:
   run:
     - python >=3.6
     - setuptools
+    
+test:
+  imports:
+    - __version__
 
 about:
   home: https://gitlab.com/alelec/__version__
