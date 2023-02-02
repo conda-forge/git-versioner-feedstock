@@ -25,10 +25,6 @@ requirements:
     - python >=3.6
     - setuptools
     
-test:
-  imports:
-    - __version__
-
 about:
   home: https://gitlab.com/alelec/__version__
   summary: Manage current / next version for project
