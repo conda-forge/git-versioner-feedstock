@@ -1,11 +1,11 @@
-About git-versioner
-===================
+About git-versioner-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/git-versioner-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.com/alelec/__version__
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/git-versioner-feedstock/blob/main/LICENSE.txt)
 
 Summary: Manage current / next version for project
 
