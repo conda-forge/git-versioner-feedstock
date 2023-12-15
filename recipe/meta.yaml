@@ -1,6 +1,6 @@
 {% set name = "git-versioner" %}
 {% set name_url = "git_versioner" %}
-{% set version = "5.2" %}
+{% set version = "7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/py3/{{ name[0] }}/{{ name }}/{{ name_url }}-{{ version }}-py3-none-any.whl
-  sha256: 2208c3e4353c3af5c0089b3841d12be051f78ec74dc55cd34f4d877ab2674cf4
+  sha256: 234ad7214282434d71cb9d442deb2a74491c2558346f1d52322ebae8be608c90
 
 build:
   noarch: python
@@ -19,12 +19,17 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - setuptools
-    
+    - tomli
+
+test:
+  requires:
+    - git
+
 about:
   home: https://gitlab.com/alelec/__version__
   summary: Manage current / next version for project
