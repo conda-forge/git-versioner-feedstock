@@ -19,11 +19,16 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - setuptools
+    - tomli
+
+test:
+  requires:
+    - git
 
 about:
   home: https://gitlab.com/alelec/__version__
