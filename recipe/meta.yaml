@@ -7,28 +7,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/py3/{{ name[0] }}/{{ name }}/{{ name_url }}-{{ version }}-py3-none-any.whl
+  url: https://pypi.org/packages/py3/{{ name[0] }}/{{ name }}/{{ name_url }}-{{ version }}-py3-none-any.whl
   sha256: 234ad7214282434d71cb9d442deb2a74491c2558346f1d52322ebae8be608c90
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps {{ name_url }}-{{ version }}-py3-none-any.whl -vv
-  number: 0
+  number: 1
   entry_points:
     - git-versioner = __version__:main
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - setuptools
     - tomli
 
 test:
   requires:
     - git
+    - python {{ python_min }}
 
 about:
   home: https://gitlab.com/alelec/__version__
